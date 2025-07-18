@@ -2,16 +2,16 @@
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gee Emenike – QA Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -52,7 +52,8 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        I’m a QA Engineer passionate about delivering high-quality web and mobile applications. I’ve completed the TripleTen QA Bootcamp and specialize in writing test cases, executing manual and automated tests, and using tools like Selenium, Pytest, and Postman to catch bugs before users do.
+                        I’m a QA Engineer passionate about delivering high-quality web and mobile applications. I’ve completed the TripleTen QA Bootcamp and specialize in writing test cases, executing manual and automated tests, and using tools like Selenium,
+                        Pytest, and Postman to catch bugs before users do.
                     </p>
                 </div>
             </div>
@@ -66,7 +67,8 @@
                 <h3>TripleTen QA Practicum</h3>
                 <h4>QA Engineer Intern</h4>
                 <p>
-                    Completed real-world projects including UI, API, and functional testing using tools like Selenium, Jira, and Postman. Participated in agile sprints, wrote detailed bug reports, and collaborated with developers and PMs to ensure software quality.
+                    Completed real-world projects including UI, API, and functional testing using tools like Selenium, Jira, and Postman. Participated in agile sprints, wrote detailed bug reports, and collaborated with developers and PMs to ensure software
+                    quality.
                 </p>
             </div>
         </div>
@@ -89,27 +91,66 @@
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
                     <div class="project-info">
-                        <h3>QA Testing on E-Commerce Site</h3>
+                        <h3>Automation Testing – AutomationExercise.com</h3>
                         <p>
-                            Performed end-to-end manual and automated testing on a mock online store. Created test plans, found and logged bugs in Jira, and automated regression tests using Selenium.
+                            Performed manual and automated testing on the AutomationExercise.com e-commerce site using Selenium and PyTest. Created detailed test cases, executed regression testing, and logged bugs.
                         </p>
-                        <a href="https://github.com/yourusername/ecommerce-qa">View Project</a>
+
+                        <h4>Sample Selenium + PyTest Script:</h4>
+                        <pre><code>import pytest
+from selenium import webdriver
+
+@pytest.fixture
+def driver():
+    driver = webdriver.Chrome()
+    yield driver
+    driver.quit()
+
+def test_homepage_title(driver):
+    driver.get("https://automationexercise.com")
+    assert "Automation Exercise" in driver.title
+</code></pre>
+
+                        <h4>How to run:</h4>
+                        <p>
+                            1. Install Python and pip<br />
+                            2. Install Selenium and PyTest: <code>pip install selenium pytest</code><br />
+                            3. Download ChromeDriver and place it in your PATH<br />
+                            4. Save this script as <code>test_automationexercise.py</code><br />
+                            5. Run tests: <code>pytest test_automationexercise.py</code>
+                        </p>
                     </div>
                 </div>
+
                 <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
                     <div class="project-info">
                         <h3>API Testing with Postman</h3>
                         <p>
-                            Used Postman to test REST APIs for a travel booking app. Created detailed collections, validated response data, tested edge cases, and automated test runs.
+                            Used Postman to test REST APIs for a travel booking app. Created collections, validated response data, and automated test runs.
                         </p>
-                        <a href="https://github.com/yourusername/api-postman-tests">View Project</a>
+                        <h4>Sample Test Case:</h4>
+                        <pre><code>{
+  "info": {
+    "name": "Travel Booking API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Destinations",
+      "request": {
+        "method": "GET",
+        "url": "https://api.travelapp.com/destinations"
+      },
+      "response": []
+    }
+  ]
+}
+</code></pre>
+                        <h4>How to run:</h4>
+                        <p>
+                            Import this collection into Postman and run the tests using Postman's Collection Runner or Newman CLI.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -137,7 +178,7 @@
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/f/yourformid">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
+                <input type="email" name="_replyto" placeholder="Your email" required />
                 <textarea name="message" placeholder="Your message" required></textarea>
                 <button type="submit">Send</button>
             </form>
@@ -148,19 +189,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2025</span> Gee Emenike
-                    </p>
+                    <p>Copyright &copy; <span id="current-year">2025</span> Gee Emenike</p>
                 </div>
                 <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
+                    <span id="to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
                 </div>
                 <div class="col-sm-5 social">
                     <ul>
-                        <li><a href="https://github.com/yourusername" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li>
+                            <a href="https://github.com/yourusername" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -170,4 +211,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>
+
 </html>
